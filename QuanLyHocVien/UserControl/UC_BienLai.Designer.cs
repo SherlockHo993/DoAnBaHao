@@ -42,6 +42,19 @@ namespace QuanLyHocVien.UserControl
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.btnThongKeTongTienTheoLop = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemThongKeTheoDiem = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.barSubItemThongKe = new DevExpress.XtraBars.BarSubItem();
+            this.barCheckKQUA = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem3 = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonCongCu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageCongCu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupGiaoDien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,6 +83,7 @@ namespace QuanLyHocVien.UserControl
             this.gridColumnKQUA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnXEPLOAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTIENNOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlBienLai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlHocVien)).BeginInit();
             this.panelControlHocVien.SuspendLayout();
@@ -88,6 +102,7 @@ namespace QuanLyHocVien.UserControl
             this.ribbonControlBienLai.ExpandCollapseItem.Id = 0;
             this.ribbonControlBienLai.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControlBienLai.ExpandCollapseItem,
+            this.ribbonControlBienLai.SearchEditItem,
             this.btnAddNew,
             this.btnDelete,
             this.btnUpdate,
@@ -99,9 +114,21 @@ namespace QuanLyHocVien.UserControl
             this.skinRibbonGalleryBarItem1,
             this.skinRibbonGalleryBarItem2,
             this.ribbonGalleryBarItem1,
-            this.ribbonControlBienLai.SearchEditItem});
+            this.btnThongKeTongTienTheoLop,
+            this.barButtonItemThongKeTheoDiem,
+            this.barSubItem1,
+            this.barSubItem2,
+            this.barButtonItem1,
+            this.barButtonGroup1,
+            this.barButtonGroup2,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barCheckItem1,
+            this.barSubItemThongKe,
+            this.barCheckKQUA,
+            this.barCheckItem3});
             this.ribbonControlBienLai.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControlBienLai.MaxItemId = 12;
+            this.ribbonControlBienLai.MaxItemId = 26;
             this.ribbonControlBienLai.Name = "ribbonControlBienLai";
             this.ribbonControlBienLai.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonCongCu,
@@ -191,6 +218,93 @@ namespace QuanLyHocVien.UserControl
             this.ribbonGalleryBarItem1.Id = 11;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
+            // btnThongKeTongTienTheoLop
+            // 
+            this.btnThongKeTongTienTheoLop.Caption = "Tổng Tiền Theo Lớp";
+            this.btnThongKeTongTienTheoLop.Id = 12;
+            this.btnThongKeTongTienTheoLop.Name = "btnThongKeTongTienTheoLop";
+            this.btnThongKeTongTienTheoLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongKeTongTienTheoLop_ItemClick);
+            // 
+            // barButtonItemThongKeTheoDiem
+            // 
+            this.barButtonItemThongKeTheoDiem.Caption = "Thống Kê Theo Điểm";
+            this.barButtonItemThongKeTheoDiem.Id = 13;
+            this.barButtonItemThongKeTheoDiem.Name = "barButtonItemThongKeTheoDiem";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "barSubItem1";
+            this.barSubItem1.Id = 14;
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "barSubItem2";
+            this.barSubItem2.Id = 15;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 16;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonGroup1
+            // 
+            this.barButtonGroup1.Caption = "barButtonGroup1";
+            this.barButtonGroup1.Id = 17;
+            this.barButtonGroup1.Name = "barButtonGroup1";
+            // 
+            // barButtonGroup2
+            // 
+            this.barButtonGroup2.Caption = "barButtonGroup2";
+            this.barButtonGroup2.Id = 18;
+            this.barButtonGroup2.Name = "barButtonGroup2";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 19;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 20;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barCheckItem1
+            // 
+            this.barCheckItem1.Caption = "Hoc Viên Đậu\r\n";
+            this.barCheckItem1.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
+            this.barCheckItem1.Id = 21;
+            this.barCheckItem1.Name = "barCheckItem1";
+            // 
+            // barSubItemThongKe
+            // 
+            this.barSubItemThongKe.Caption = "Loại Thống Kê";
+            this.barSubItemThongKe.Id = 23;
+            this.barSubItemThongKe.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckKQUA),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem3)});
+            this.barSubItemThongKe.Name = "barSubItemThongKe";
+            // 
+            // barCheckKQUA
+            // 
+            this.barCheckKQUA.Caption = "Kết Quả";
+            this.barCheckKQUA.Id = 24;
+            this.barCheckKQUA.Name = "barCheckKQUA";
+            this.barCheckKQUA.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.barCheckDiem_CheckedChanged);
+            // 
+            // barCheckItem3
+            // 
+            this.barCheckItem3.Caption = "Tổng Tiền Theo Lớp";
+            this.barCheckItem3.Id = 25;
+            this.barCheckItem3.Name = "barCheckItem3";
+            this.barCheckItem3.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.barCheckItem3_CheckedChanged);
+            // 
             // ribbonCongCu
             // 
             this.ribbonCongCu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -226,6 +340,7 @@ namespace QuanLyHocVien.UserControl
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barSubItemThongKe);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -465,6 +580,10 @@ namespace QuanLyHocVien.UserControl
             this.gridColumnTIENNOP.Visible = true;
             this.gridColumnTIENNOP.VisibleIndex = 5;
             // 
+            // barCheckItem2
+            // 
+            this.barCheckItem2.Name = "barCheckItem2";
+            // 
             // UC_BienLai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,7 +630,6 @@ namespace QuanLyHocVien.UserControl
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageCongCu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupGiaoDien;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageThongKe;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBarThongTin;
         private DevExpress.XtraEditors.PanelControl panelControlHocVien;
         private DevExpress.XtraEditors.TextEdit textEditXEPLOAI;
@@ -535,5 +653,20 @@ namespace QuanLyHocVien.UserControl
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTIENNOP;
         private DevExpress.XtraEditors.SpinEdit spinEditDIEM;
         private DevExpress.XtraEditors.SpinEdit spinEditTIENNOP;
+        private DevExpress.XtraBars.BarButtonItem btnThongKeTongTienTheoLop;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemThongKeTheoDiem;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem2;
+        private DevExpress.XtraBars.BarSubItem barSubItemThongKe;
+        private DevExpress.XtraBars.BarCheckItem barCheckKQUA;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem3;
     }
 }

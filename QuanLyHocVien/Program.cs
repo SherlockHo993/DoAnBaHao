@@ -29,6 +29,7 @@ namespace QuanLyHocVien
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("Windows Vista");
             Application.Run(new frmQuanLyHocVien());
+            //Application.Run(new frmTongTienTheoLop());
         }
     }
 }

@@ -466,7 +466,6 @@ namespace QuanLyHocVien.UserControl
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControlHocVien;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonCongCu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageCongCu;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBarThongTin;
         private DevExpress.XtraBars.BarButtonItem btnAddNew;
         private DevExpress.XtraBars.BarButtonItem btnDelete;

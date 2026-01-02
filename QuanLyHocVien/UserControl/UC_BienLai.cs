@@ -230,5 +230,31 @@ namespace QuanLyHocVien.UserControl
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnThongKeTongTienTheoLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var f = new frmTongTienTheoLop())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void barCheckItem3_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var f = new frmTongTienTheoLop())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void barCheckDiem_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var item = e.Item as DevExpress.XtraBars.BarCheckItem;
+            if (item == null) return;
+            if (!item.Checked) return;
+
+            using (var f = new frmThongKeTheoKQUA("ĐẬU"))
+                f.ShowDialog();
+        }
     }
 }

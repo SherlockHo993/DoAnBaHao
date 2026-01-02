@@ -1,0 +1,12 @@
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\DAL.dll.config
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\DAL.dll
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\DAL.pdb
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\EntityFramework.dll
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\EntityFramework.xml
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\obj\Debug\DAL.dll
+C:\Users\sherl\source\repos\DoAnCoHao\DAL\obj\Debug\DAL.pdb

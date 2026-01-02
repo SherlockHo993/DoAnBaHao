@@ -101,3 +101,5 @@ C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmT
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.XtraReportTongTienTheoLop.resources
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKeTheoKQUA.resources
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmThongKeTheoKQUA.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmHelp.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\bin\Debug\Help\HuongDan.pdf

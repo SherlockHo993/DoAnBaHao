@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using System.IO;
+using System.Diagnostics;
+using DevExpress.XtraBars;
 
 namespace QuanLyHocVien.UserControl
 {
@@ -26,10 +29,50 @@ namespace QuanLyHocVien.UserControl
 
         private void UC_BienLai_Load_1(object sender, EventArgs e)
         {
+            textEditKQUA.Properties.ReadOnly = true;
+            textEditXEPLOAI.Properties.ReadOnly = true;
+            textEditKQUA.TabStop = false;
+            textEditXEPLOAI.TabStop = false;
+            spinEditDIEM.Properties.MinValue = 0;
+            spinEditDIEM.Properties.MaxValue = 10;
+            spinEditDIEM.Properties.Increment = 0.1m;
+
+            spinEditDIEM.EditValueChanged += spinEditDIEM_EditValueChanged;
+
             dataLoading();
             status(true);
         }
 
+        private void spinEditDIEM_EditValueChanged(object sender, EventArgs e)
+        {
+            ApplyKQXLFromDiem();
+        }
+
+        private void ApplyKQXLFromDiem()
+        {
+            decimal? diem = null;
+            if (spinEditDIEM.EditValue != null)
+                diem = Convert.ToDecimal(spinEditDIEM.EditValue);
+
+            if (!diem.HasValue)
+            {
+                textEditKQUA.Text = "";
+                textEditXEPLOAI.Text = "";
+                return;
+            }
+
+            // KQ: ĐẬU nếu >= 7
+            textEditKQUA.Text = (diem.Value >= 7m) ? "ĐẬU" : "RỚT";
+
+            // XL: A/B/C/D
+            char xl;
+            if (diem.Value >= 8.5m) xl = 'A';
+            else if (diem.Value >= 7.0m) xl = 'B';
+            else if (diem.Value >= 5.0m) xl = 'C';
+            else xl = 'D';
+
+            textEditXEPLOAI.Text = xl.ToString();
+        }
         private void dataLoading()
         {
             GCBienLai.DataSource = blBLL.GetListStaff();
@@ -231,30 +274,68 @@ namespace QuanLyHocVien.UserControl
             }
         }
 
-        private void btnThongKeTongTienTheoLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            using (var f = new frmTongTienTheoLop())
-            {
-                f.ShowDialog();
-            }
-        }
 
-        private void barCheckItem3_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            using (var f = new frmTongTienTheoLop())
-            {
-                f.ShowDialog();
-            }
-        }
 
-        private void barCheckDiem_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItemKQDat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var item = e.Item as DevExpress.XtraBars.BarCheckItem;
-            if (item == null) return;
-            if (!item.Checked) return;
-
             using (var f = new frmThongKeTheoKQUA("ĐẬU"))
                 f.ShowDialog();
+        }
+
+        private void barButtonItemKQRot_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (var f = new frmThongKeTheoKQUA("RỚT"))
+                f.ShowDialog();
+        }
+
+        private void barBtnMoPDF_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string pdfPath = Path.Combine(Application.StartupPath, "Help", "HuongDan.pdf");
+
+            if (!File.Exists(pdfPath))
+            {
+                XtraMessageBox.Show("Không tìm thấy file hướng dẫn:\n" + pdfPath,
+                    "Help", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Process.Start(new ProcessStartInfo(pdfPath) { UseShellExecute = true });
+        }
+
+        private void barBtnAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show(
+                "PHẦN MỀM QUẢN LÝ HỌC VIÊN\n" +
+                "Version: 1.0\n" +
+                "DevExpress WinForms\n" +
+                "© 2026",
+                "About",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        private void barBtnContact_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string url = "https://zalo.me/g/pwdmce007"; // đổi link của bạn
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+
+        private void barBtnHuongDan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (var f = new frmHelp())
+            {
+                f.StartPosition = FormStartPosition.CenterParent;
+                f.ShowDialog(this);
+            }
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (var f = new frmTongTienTheoLop())
+            {
+                f.ShowDialog();
+            }
         }
     }
 }

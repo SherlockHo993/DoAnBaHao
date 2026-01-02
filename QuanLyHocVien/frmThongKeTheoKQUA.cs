@@ -14,13 +14,12 @@ namespace QuanLyHocVien
 {
     public partial class frmThongKeTheoKQUA : DevExpress.XtraEditors.XtraForm
     {
-        private string ketQua = "ĐẬU"; // default
+        private string ketQua;
 
-        public frmThongKeTheoKQUA(string kq) : this()
+        public frmThongKeTheoKQUA(string kq)
         {
-            ketQua = (kq ?? "").Trim();
-            if (string.IsNullOrWhiteSpace(ketQua))
-                ketQua = "ĐẬU";
+            InitializeComponent();
+            ketQua = kq;
         }
 
         public frmThongKeTheoKQUA()
@@ -32,14 +31,11 @@ namespace QuanLyHocVien
         {
             var re = new XtraReportThongKeTheoKQUA();
 
-            // ✅ không hỏi parameters
             re.RequestParameters = false;
 
-            // ✅ set parameter
             re.Parameters["pKQUA"].Value = ketQua;
             re.Parameters["pKQUA"].Visible = false;
 
-            // ✅ gán nguồn + tạo document
             documentViewerThongKeTheoKQUA.DocumentSource = re;
             re.CreateDocument();
         }

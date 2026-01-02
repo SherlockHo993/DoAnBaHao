@@ -21,6 +21,8 @@ namespace QuanLyHocVien
         public frmQuanLyHocVien()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += frmQuanLyHocVien_KeyDown;
             using (var fLogin = new frmLogin())
             {
                 if (fLogin.ShowDialog() == DialogResult.OK)
@@ -33,7 +35,20 @@ namespace QuanLyHocVien
                 }
             }
             accordionControlElementHocVien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-    }
+        }
+
+        private void frmQuanLyHocVien_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                e.Handled = true;
+                using (var f = new frmHelp())
+                {
+                    f.StartPosition = FormStartPosition.CenterParent;
+                    f.ShowDialog(this);
+                }
+            }
+        }
 
         private void accordionControlDangNhap_Click(object sender, EventArgs e)
         {
@@ -66,7 +81,7 @@ namespace QuanLyHocVien
         private void frmQuanLyHocVien_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = XtraMessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(dr == DialogResult.No)
+            if (dr == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -79,7 +94,7 @@ namespace QuanLyHocVien
         }
         private void frmQuanLyHocVien_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void accordionControlDoiMatKhau_Click(object sender, EventArgs e)

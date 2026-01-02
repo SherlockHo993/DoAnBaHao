@@ -7,6 +7,7 @@ using System.Collections;
 using DAL;
 using DAL.Model;
 
+
 namespace BLL
 {
     public class BienLaiBLL
@@ -18,7 +19,27 @@ namespace BLL
             return blDAL.GetListStaff();
         }
 
-        // Check trùng PK kép (MALH, MAHV) - giống ExistsMAHV bên học viên
+        private static void CalcFromDiem(decimal? diem, out string kqua, out string xeploai)
+        {
+            if (!diem.HasValue)
+            {
+                kqua = null;
+                xeploai = null;
+                return;
+            }
+
+
+            kqua = (diem.Value >= 7m) ? "ĐẬU" : "RỚT";
+
+            char xl;
+            if (diem.Value >= 8.5m) xl = 'A';
+            else if (diem.Value >= 7.0m) xl = 'B';
+            else if (diem.Value >= 5.0m) xl = 'C';
+            else xl = 'D';
+
+            xeploai = xl.ToString(); 
+        }
+
         public bool ExistsBienLai(string malh, string mahv, out string err)
         {
             err = null;
@@ -46,9 +67,7 @@ namespace BLL
             {
                 malh = (malh ?? "").Trim();
                 mahv = (mahv ?? "").Trim();
-                kqua = (kqua ?? "").Trim();
-                xeploai = (xeploai ?? "").Trim();
-                // TIENNOP thường không có lẻ
+
                 if (tiennop.HasValue) tiennop = Math.Round(tiennop.Value, 0);
 
                 if (string.IsNullOrWhiteSpace(malh)) { err = "Vui lòng nhập MALH."; return false; }
@@ -61,16 +80,16 @@ namespace BLL
 
                 if (diem.HasValue && (diem.Value < 0 || diem.Value > 10)) { err = "Điểm phải từ 0 đến 10."; return false; }
                 if (tiennop.HasValue && tiennop.Value < 0) { err = "Tiền nộp không hợp lệ."; return false; }
-                if (!string.IsNullOrEmpty(kqua) && kqua.Length > 10) { err = "KQUA tối đa 10 ký tự."; return false; }
-                if (!string.IsNullOrEmpty(xeploai) && xeploai.Length > 1) { err = "XEPLOAI chỉ 1 ký tự."; return false; }
+
+                CalcFromDiem(diem, out kqua, out xeploai);
 
                 var bl = new BIENLAI
                 {
                     MALH = malh,
                     MAHV = mahv,
                     DIEM = diem,
-                    KQUA = string.IsNullOrWhiteSpace(kqua) ? null : kqua,
-                    XEPLOAI = string.IsNullOrWhiteSpace(xeploai) ? null : xeploai,
+                    KQUA = kqua,           
+                    XEPLOAI = xeploai,     
                     TIENNOP = tiennop
                 };
 
@@ -84,7 +103,6 @@ namespace BLL
             }
         }
 
-        // Update KHÔNG đổi khóa (MALH, MAHV)
         public bool UpdateBienLai(string malh, string mahv, decimal? diem, string kqua, string xeploai, decimal? tiennop, out string err)
         {
             err = null;
@@ -92,8 +110,7 @@ namespace BLL
             {
                 malh = (malh ?? "").Trim();
                 mahv = (mahv ?? "").Trim();
-                kqua = (kqua ?? "").Trim();
-                xeploai = (xeploai ?? "").Trim();
+
                 if (tiennop.HasValue) tiennop = Math.Round(tiennop.Value, 0);
 
                 if (string.IsNullOrWhiteSpace(malh) || string.IsNullOrWhiteSpace(mahv))
@@ -104,16 +121,16 @@ namespace BLL
 
                 if (diem.HasValue && (diem.Value < 0 || diem.Value > 10)) { err = "Điểm phải từ 0 đến 10."; return false; }
                 if (tiennop.HasValue && tiennop.Value < 0) { err = "Tiền nộp không hợp lệ."; return false; }
-                if (!string.IsNullOrEmpty(kqua) && kqua.Length > 10) { err = "KQUA tối đa 10 ký tự."; return false; }
-                if (!string.IsNullOrEmpty(xeploai) && xeploai.Length > 1) { err = "XEPLOAI chỉ 1 ký tự."; return false; }
+
+                CalcFromDiem(diem, out kqua, out xeploai);
 
                 var bl = new BIENLAI
                 {
                     MALH = malh,
                     MAHV = mahv,
                     DIEM = diem,
-                    KQUA = string.IsNullOrWhiteSpace(kqua) ? null : kqua,
-                    XEPLOAI = string.IsNullOrWhiteSpace(xeploai) ? null : xeploai,
+                    KQUA = kqua,
+                    XEPLOAI = xeploai,
                     TIENNOP = tiennop
                 };
 
@@ -137,7 +154,7 @@ namespace BLL
 
                 if (string.IsNullOrWhiteSpace(malh) || string.IsNullOrWhiteSpace(mahv))
                 {
-                    err = "Thiếu MALH/MAHV để xóa.";
+                    err = "Thiếu MALH hoặc MAHV để xóa.";
                     return false;
                 }
 
@@ -152,4 +169,5 @@ namespace BLL
         }
     }
 }
+
 

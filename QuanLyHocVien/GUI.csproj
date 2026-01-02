@@ -94,6 +94,12 @@
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyHocVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyHocVien.resx">
       <DependentUpon>frmQuanLyHocVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +217,9 @@
     <EmbeddedResource Include="Report\XtraReportTongTienTheoLop.resx">
       <DependentUpon>XtraReportTongTienTheoLop.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="Help\HuongDan.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

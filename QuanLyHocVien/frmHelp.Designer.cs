@@ -29,6 +29,7 @@ namespace QuanLyHocVien
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHelp));
             this.memoHelp = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.memoHelp.Properties)).BeginInit();
             this.SuspendLayout();
@@ -48,8 +49,9 @@ namespace QuanLyHocVien
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 394);
             this.Controls.Add(this.memoHelp);
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmHelp.IconOptions.LargeImage")));
             this.Name = "frmHelp";
-            this.Text = "frmHelp";
+            this.Text = "Đề Đồ Án";
             this.Load += new System.EventHandler(this.frmHelp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.memoHelp.Properties)).EndInit();
             this.ResumeLayout(false);

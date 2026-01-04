@@ -34,10 +34,6 @@ namespace QuanLyHocVien
             }
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
         public string UserName { get; set; }
         private void btnOK_Click(object sender, EventArgs e)
         {

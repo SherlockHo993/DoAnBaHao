@@ -147,7 +147,7 @@ namespace QuanLyHocVien
             - TENLOP: Tên lớp
             - MAMH: Mã môn học
             - MAGV: Mã giáo viên phụ trách (FK tới bảng GIAOVIEN)
-            - LTRG: Lớp trưởng (nếu thiết kế là số hoặc mã HV tùy hệ thống)
+            - LTRG: Số tín chỉ
             - SISODK: Sĩ số đăng ký
             - PHHOC: Phòng học
 

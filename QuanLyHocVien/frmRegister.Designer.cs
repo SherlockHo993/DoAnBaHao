@@ -29,9 +29,11 @@ namespace QuanLyHocVien
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnDangKi = new DevExpress.XtraEditors.SimpleButton();
             this.groupControlDangKy = new DevExpress.XtraEditors.GroupControl();
+            this.checkEditHienMatKhau = new DevExpress.XtraEditors.CheckEdit();
             this.textEditRePass = new DevExpress.XtraEditors.TextEdit();
             this.lblNhapLaiMatKhau = new DevExpress.XtraEditors.LabelControl();
             this.textEditPass = new DevExpress.XtraEditors.TextEdit();
@@ -41,13 +43,12 @@ namespace QuanLyHocVien
             this.lblPassword = new DevExpress.XtraEditors.LabelControl();
             this.textEditTenDangNhap = new DevExpress.XtraEditors.TextEdit();
             this.lblTenDangNhap = new DevExpress.XtraEditors.LabelControl();
-            this.checkEditHienMatKhau = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDangKy)).BeginInit();
             this.groupControlDangKy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditRePass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenDangNhap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -89,7 +90,16 @@ namespace QuanLyHocVien
             this.groupControlDangKy.Name = "groupControlDangKy";
             this.groupControlDangKy.Size = new System.Drawing.Size(406, 203);
             this.groupControlDangKy.TabIndex = 2;
-            this.groupControlDangKy.Text = "Thông Tin Đăng Nhập";
+            this.groupControlDangKy.Text = "Thông Tin Đăng Ký";
+            // 
+            // checkEditHienMatKhau
+            // 
+            this.checkEditHienMatKhau.Location = new System.Drawing.Point(155, 167);
+            this.checkEditHienMatKhau.Name = "checkEditHienMatKhau";
+            this.checkEditHienMatKhau.Properties.Caption = "Hiện Mật Khẩu";
+            this.checkEditHienMatKhau.Size = new System.Drawing.Size(97, 20);
+            this.checkEditHienMatKhau.TabIndex = 4;
+            this.checkEditHienMatKhau.CheckedChanged += new System.EventHandler(this.checkEditHienMatKhau_CheckedChanged_1);
             // 
             // textEditRePass
             // 
@@ -183,15 +193,6 @@ namespace QuanLyHocVien
             this.lblTenDangNhap.TabIndex = 0;
             this.lblTenDangNhap.Text = "Tên Đăng Nhập";
             // 
-            // checkEditHienMatKhau
-            // 
-            this.checkEditHienMatKhau.Location = new System.Drawing.Point(155, 167);
-            this.checkEditHienMatKhau.Name = "checkEditHienMatKhau";
-            this.checkEditHienMatKhau.Properties.Caption = "Hiện Mật Khẩu";
-            this.checkEditHienMatKhau.Size = new System.Drawing.Size(97, 20);
-            this.checkEditHienMatKhau.TabIndex = 4;
-            this.checkEditHienMatKhau.CheckedChanged += new System.EventHandler(this.checkEditHienMatKhau_CheckedChanged_1);
-            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,16 +201,17 @@ namespace QuanLyHocVien
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDangKi);
             this.Controls.Add(this.groupControlDangKy);
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmRegister.IconOptions.LargeImage")));
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDangKy)).EndInit();
             this.groupControlDangKy.ResumeLayout(false);
             this.groupControlDangKy.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditRePass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenDangNhap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

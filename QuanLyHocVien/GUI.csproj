@@ -106,6 +106,24 @@
     <Compile Include="frmQuanLyHocVien.Designer.cs">
       <DependentUpon>frmQuanLyHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKeGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeGiaoVien.Designer.cs">
+      <DependentUpon>frmThongKeGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeHocVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeHocVien.Designer.cs">
+      <DependentUpon>frmThongKeHocVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKePCGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKePCGV.Designer.cs">
+      <DependentUpon>frmThongKePCGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongKeTheoKQUA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +150,41 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\XtraReportThongKeGiaoVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKeGiaoVien.Designer.cs">
+      <DependentUpon>XtraReportThongKeGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKeHV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKeHV.Designer.cs">
+      <DependentUpon>XtraReportThongKeHV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKePCGV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKePCGV.Designer.cs">
+      <DependentUpon>XtraReportThongKePCGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKeLopHoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportThongKeLopHoc.Designer.cs">
+      <DependentUpon>XtraReportThongKeLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\XtraReportThongKeTheoKQUA.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\XtraReportThongKeTheoKQUA.Designer.cs">
       <DependentUpon>XtraReportThongKeTheoKQUA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeLopHoc.Designer.cs">
+      <DependentUpon>frmThongKeLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UC_BienLai.cs">
       <SubType>UserControl</SubType>
@@ -177,6 +225,15 @@
     <EmbeddedResource Include="frmQuanLyHocVien.resx">
       <DependentUpon>frmQuanLyHocVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeGiaoVien.resx">
+      <DependentUpon>frmThongKeGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeHocVien.resx">
+      <DependentUpon>frmThongKeHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKePCGV.resx">
+      <DependentUpon>frmThongKePCGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeTheoKQUA.resx">
       <DependentUpon>frmThongKeTheoKQUA.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,8 +256,23 @@
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportThongKeGiaoVien.resx">
+      <DependentUpon>XtraReportThongKeGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportThongKeHV.resx">
+      <DependentUpon>XtraReportThongKeHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportThongKePCGV.resx">
+      <DependentUpon>XtraReportThongKePCGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportThongKeLopHoc.resx">
+      <DependentUpon>XtraReportThongKeLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\XtraReportThongKeTheoKQUA.resx">
       <DependentUpon>XtraReportThongKeTheoKQUA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeLopHoc.resx">
+      <DependentUpon>frmThongKeLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UC_BienLai.resx">
       <DependentUpon>UC_BienLai.cs</DependentUpon>

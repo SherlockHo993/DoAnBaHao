@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using System.IO;
+using System.Diagnostics;
 
 namespace QuanLyHocVien.UserControl
 {
@@ -232,6 +234,64 @@ namespace QuanLyHocVien.UserControl
                 XtraMessageBox.Show("Có lỗi khi xóa:\n" + ex.Message, "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void barButtonItemTongHop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var f = new frmThongKeLopHoc())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void barButtonItemPCGV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var f = new frmThongKePCGV())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void barButtonItemHuongDan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var f = new frmHelp())
+            {
+                f.StartPosition = FormStartPosition.CenterParent;
+                f.ShowDialog(this);
+            }
+        }
+
+        private void barButtonItemPDF_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string pdfPath = Path.Combine(Application.StartupPath, "Help", "HuongDan.pdf");
+
+            if (!File.Exists(pdfPath))
+            {
+                XtraMessageBox.Show("Không tìm thấy file hướng dẫn:\n" + pdfPath,
+                    "Help", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Process.Start(new ProcessStartInfo(pdfPath) { UseShellExecute = true });
+        }
+
+        private void barButtonItemAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show(
+          "PHẦN MỀM QUẢN LÝ HỌC VIÊN\n" +
+          "Version: 1.0\n" +
+          "Designer: Đắc Việt Sherlock\n" +
+          "© Copy Right Shelock 2026\n",
+          "About",
+          MessageBoxButtons.OK,
+          MessageBoxIcon.Information
+          );
+        }
+
+        private void barButtonItemLienHe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string url = "https://zalo.me/g/pwdmce007";
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
     }
 }

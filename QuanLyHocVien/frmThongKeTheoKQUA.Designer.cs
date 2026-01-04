@@ -914,8 +914,9 @@ namespace QuanLyHocVien
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmThongKeTheoKQUA.IconOptions.LargeImage")));
             this.Name = "frmThongKeTheoKQUA";
-            this.Text = "frmThongKeTheoKQUA";
+            this.Text = "Báo Cáo Danh Sách Kết Quả Học Viên";
             this.Load += new System.EventHandler(this.frmThongKeTheoKQUA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentViewerBarManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printPreviewRepositoryItemComboBox1)).EndInit();

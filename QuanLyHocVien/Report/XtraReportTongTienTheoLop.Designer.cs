@@ -103,7 +103,7 @@ namespace QuanLyHocVien
             // 
             this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.pageInfo1.Name = "pageInfo1";
-            this.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.UserName;
             this.pageInfo1.SizeF = new System.Drawing.SizeF(313.5F, 23F);
             this.pageInfo1.StyleName = "PageInfo";
             // 
@@ -508,14 +508,14 @@ namespace QuanLyHocVien
             // 
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(556.5669F, 0F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(490.4462F, 0F);
             this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(44.92096F, 14.88444F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(111.0416F, 14.88444F);
             this.xrLabel1.StyleName = "TotalCaption1";
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseForeColor = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Tổng";
+            this.xrLabel1.Text = "Tổng Các Lớp";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // label7
@@ -525,9 +525,9 @@ namespace QuanLyHocVien
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TIENNOP])")});
             this.label7.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(544.196F, 24.88445F);
+            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(495.2214F, 24.49999F);
             this.label7.Name = "label7";
-            this.label7.SizeF = new System.Drawing.SizeF(82.80381F, 14.88444F);
+            this.label7.SizeF = new System.Drawing.SizeF(106.2664F, 14.88444F);
             this.label7.StyleName = "GrandTotalData1";
             this.label7.StylePriority.UseFont = false;
             this.label7.StylePriority.UseForeColor = false;
@@ -535,7 +535,7 @@ namespace QuanLyHocVien
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.label7.Summary = xrSummary2;
             this.label7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.label7.TextFormatString = "{0:C2}";
+            this.label7.TextFormatString = "{0:0 VND}";
             this.label7.WordWrap = false;
             // 
             // sqlDataSource1

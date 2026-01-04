@@ -103,3 +103,11 @@ C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Repo
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmThongKeTheoKQUA.resources
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmHelp.resources
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\bin\Debug\Help\HuongDan.pdf
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmThongKePCGV.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKePCGV.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKeLopHoc.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.UserControl.frmThongKeLopHoc.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmThongKeGiaoVien.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKeGiaoVien.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKeHV.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmThongKeHocVien.resources

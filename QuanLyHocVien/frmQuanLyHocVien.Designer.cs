@@ -30,6 +30,7 @@ namespace QuanLyHocVien
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyHocVien));
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.fluentDesignFormContainerMain = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
@@ -91,16 +92,13 @@ namespace QuanLyHocVien
             this.accordionControlSeparator3,
             this.accordionControlElementDangXuat});
             this.accordionControlHeThong.Expanded = true;
+            this.accordionControlHeThong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlHeThong.ImageOptions.SvgImage")));
             this.accordionControlHeThong.Name = "accordionControlHeThong";
             this.accordionControlHeThong.Text = "Hệ Thống";
             // 
             // accordionControlDangNhap
             // 
-            this.accordionControlDangNhap.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.accordionControlDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlDangNhap.ImageOptions.Image")));
             this.accordionControlDangNhap.Name = "accordionControlDangNhap";
             this.accordionControlDangNhap.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlDangNhap.Text = "Đăng Nhập";
@@ -112,11 +110,7 @@ namespace QuanLyHocVien
             // 
             // accordionControlElementDK
             // 
-            this.accordionControlElementDK.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.accordionControlElementDK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElementDK.ImageOptions.Image")));
             this.accordionControlElementDK.Name = "accordionControlElementDK";
             this.accordionControlElementDK.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementDK.Text = "Đăng Kí Tài Khoản";
@@ -129,6 +123,7 @@ namespace QuanLyHocVien
             // accordionControlDoiMatKhau
             // 
             this.accordionControlDoiMatKhau.Expanded = true;
+            this.accordionControlDoiMatKhau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlDoiMatKhau.ImageOptions.Image")));
             this.accordionControlDoiMatKhau.Name = "accordionControlDoiMatKhau";
             this.accordionControlDoiMatKhau.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlDoiMatKhau.Text = "Đổi Mật Khẩu";
@@ -140,6 +135,7 @@ namespace QuanLyHocVien
             // 
             // accordionControlElementDangXuat
             // 
+            this.accordionControlElementDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElementDangXuat.ImageOptions.Image")));
             this.accordionControlElementDangXuat.Name = "accordionControlElementDangXuat";
             this.accordionControlElementDangXuat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementDangXuat.Text = "Đăng Xuất";
@@ -156,11 +152,13 @@ namespace QuanLyHocVien
             this.accordionControlSeparator6,
             this.accordionControlElementBienLai});
             this.accordionControlElementThongTin.Expanded = true;
+            this.accordionControlElementThongTin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementThongTin.ImageOptions.SvgImage")));
             this.accordionControlElementThongTin.Name = "accordionControlElementThongTin";
             this.accordionControlElementThongTin.Text = "Quản Lý Thông Tin";
             // 
             // accordionControlElementHocVien
             // 
+            this.accordionControlElementHocVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElementHocVien.ImageOptions.Image")));
             this.accordionControlElementHocVien.Name = "accordionControlElementHocVien";
             this.accordionControlElementHocVien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementHocVien.Text = "Danh Mục Học Viên";
@@ -172,6 +170,7 @@ namespace QuanLyHocVien
             // 
             // accordionControlElementGiaoVien
             // 
+            this.accordionControlElementGiaoVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElementGiaoVien.ImageOptions.Image")));
             this.accordionControlElementGiaoVien.Name = "accordionControlElementGiaoVien";
             this.accordionControlElementGiaoVien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementGiaoVien.Text = "Danh Mục Giáo Viên";
@@ -183,6 +182,7 @@ namespace QuanLyHocVien
             // 
             // accordionControlElementLopHoc
             // 
+            this.accordionControlElementLopHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElementLopHoc.ImageOptions.Image")));
             this.accordionControlElementLopHoc.Name = "accordionControlElementLopHoc";
             this.accordionControlElementLopHoc.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementLopHoc.Text = "Danh Mục Lớp Học";
@@ -194,6 +194,7 @@ namespace QuanLyHocVien
             // 
             // accordionControlElementBienLai
             // 
+            this.accordionControlElementBienLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElementBienLai.ImageOptions.Image")));
             this.accordionControlElementBienLai.Name = "accordionControlElementBienLai";
             this.accordionControlElementBienLai.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementBienLai.Text = "Danh Mục Biên Lai";
@@ -248,11 +249,12 @@ namespace QuanLyHocVien
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmQuanLyHocVien.IconOptions.LargeImage")));
             this.MaximizeBox = false;
             this.Name = "frmQuanLyHocVien";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmQuanLyHocVien";
+            this.Text = "Phần Mềm Quản Lý Học Viên";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLyHocVien_FormClosing);
             this.Load += new System.EventHandler(this.frmQuanLyHocVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();

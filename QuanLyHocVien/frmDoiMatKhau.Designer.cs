@@ -29,6 +29,7 @@ namespace QuanLyHocVien
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiMatKhau));
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.groupControlDangNhap = new DevExpress.XtraEditors.GroupControl();
@@ -199,9 +200,10 @@ namespace QuanLyHocVien
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.groupControlDangNhap);
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmDoiMatKhau.IconOptions.LargeImage")));
             this.Name = "frmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDoiMatKhau";
+            this.Text = "Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDangNhap)).EndInit();
             this.groupControlDangNhap.ResumeLayout(false);

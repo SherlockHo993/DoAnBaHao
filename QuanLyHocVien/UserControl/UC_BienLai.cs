@@ -305,19 +305,19 @@ namespace QuanLyHocVien.UserControl
         private void barBtnAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             XtraMessageBox.Show(
-                "PHẦN MỀM QUẢN LÝ HỌC VIÊN\n" +
-                "Version: 1.0\n" +
-                "DevExpress WinForms\n" +
-                "© 2026",
-                "About",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+                   "PHẦN MỀM QUẢN LÝ HỌC VIÊN\n" +
+                   "Version: 1.0\n" +
+                   "Designer: Đắc Việt Sherlock\n" +
+                   "© Copy Right Shelock 2026\n",
+                   "About",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Information
+                   );
         }
 
         private void barBtnContact_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            string url = "https://zalo.me/g/pwdmce007"; // đổi link của bạn
+            string url = "https://zalo.me/g/pwdmce007";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
 

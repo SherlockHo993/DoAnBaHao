@@ -342,6 +342,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barSubItemSort.Caption = "Loại Báo Cáo";
             this.barSubItemSort.Id = 27;
+            this.barSubItemSort.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItemSort.ImageOptions.Image")));
+            this.barSubItemSort.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItemSort.ImageOptions.LargeImage")));
             this.barSubItemSort.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemKQUA)});
@@ -351,6 +353,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barButtonItem5.Caption = "Doanh Thu Theo Lớp";
             this.barButtonItem5.Id = 28;
+            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
@@ -358,6 +362,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barSubItemKQUA.Caption = "Kết Quả Học Viên";
             this.barSubItemKQUA.Id = 29;
+            this.barSubItemKQUA.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItemKQUA.ImageOptions.Image")));
+            this.barSubItemKQUA.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItemKQUA.ImageOptions.LargeImage")));
             this.barSubItemKQUA.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemKQDau),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemKQRot)});
@@ -367,6 +373,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barButtonItemKQDau.Caption = "Đậu";
             this.barButtonItemKQDau.Id = 30;
+            this.barButtonItemKQDau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemKQDau.ImageOptions.Image")));
+            this.barButtonItemKQDau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemKQDau.ImageOptions.LargeImage")));
             this.barButtonItemKQDau.Name = "barButtonItemKQDau";
             this.barButtonItemKQDau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemKQDat_ItemClick);
             // 
@@ -374,6 +382,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barButtonItemKQRot.Caption = "Rớt";
             this.barButtonItemKQRot.Id = 31;
+            this.barButtonItemKQRot.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemKQRot.ImageOptions.Image")));
+            this.barButtonItemKQRot.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemKQRot.ImageOptions.LargeImage")));
             this.barButtonItemKQRot.Name = "barButtonItemKQRot";
             this.barButtonItemKQRot.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemKQRot_ItemClick);
             // 
@@ -381,6 +391,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barBtnHuongDan.Caption = "Hướng dẫn";
             this.barBtnHuongDan.Id = 32;
+            this.barBtnHuongDan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnHuongDan.ImageOptions.Image")));
+            this.barBtnHuongDan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnHuongDan.ImageOptions.LargeImage")));
             this.barBtnHuongDan.Name = "barBtnHuongDan";
             this.barBtnHuongDan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnHuongDan_ItemClick);
             // 
@@ -388,6 +400,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barBtnMoPDF.Caption = "Mở file PDF";
             this.barBtnMoPDF.Id = 33;
+            this.barBtnMoPDF.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnMoPDF.ImageOptions.Image")));
+            this.barBtnMoPDF.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnMoPDF.ImageOptions.LargeImage")));
             this.barBtnMoPDF.Name = "barBtnMoPDF";
             this.barBtnMoPDF.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnMoPDF_ItemClick);
             // 
@@ -395,6 +409,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barBtnAbout.Caption = "Giới thiệu";
             this.barBtnAbout.Id = 34;
+            this.barBtnAbout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnAbout.ImageOptions.Image")));
+            this.barBtnAbout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnAbout.ImageOptions.LargeImage")));
             this.barBtnAbout.Name = "barBtnAbout";
             this.barBtnAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnAbout_ItemClick);
             // 
@@ -402,6 +418,8 @@ namespace QuanLyHocVien.UserControl
             // 
             this.barBtnContact.Caption = "Liên hệ";
             this.barBtnContact.Id = 35;
+            this.barBtnContact.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnContact.ImageOptions.Image")));
+            this.barBtnContact.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnContact.ImageOptions.LargeImage")));
             this.barBtnContact.Name = "barBtnContact";
             this.barBtnContact.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnContact_ItemClick);
             // 

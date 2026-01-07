@@ -27,6 +27,36 @@ namespace QuanLyHocVien.UserControl
             InitializeComponent();
         }
 
+        private void LoadLookups()
+        {
+            var lopList = blBLL.GetLookupLopHoc(); 
+
+            lookUpEditMALH.Properties.DataSource = lopList;
+            lookUpEditMALH.Properties.DisplayMember = "MALH";
+            lookUpEditMALH.Properties.ValueMember = "MALH";
+            lookUpEditMALH.Properties.NullText = "-- Chọn mã lớp học --";
+
+            lookUpEditMALH.Properties.Columns.Clear();
+            lookUpEditMALH.Properties.Columns.Add(
+                new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MALH", "Mã lớp")
+            );
+
+            lookUpEditMALH.EditValue = null;
+
+            var hvList = blBLL.GetLookupHocVien();
+
+            lookUpEditMAHV.Properties.DataSource = hvList;
+            lookUpEditMAHV.Properties.DisplayMember = "MAHV";
+            lookUpEditMAHV.Properties.ValueMember = "MAHV";
+            lookUpEditMAHV.Properties.NullText = "-- Chọn mã học viên --";
+
+            lookUpEditMAHV.Properties.Columns.Clear();
+            lookUpEditMAHV.Properties.Columns.Add(
+                new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MAHV", "Mã HV")
+            );
+            lookUpEditMAHV.EditValue = null;
+        }
+
         private void UC_BienLai_Load_1(object sender, EventArgs e)
         {
             textEditKQUA.Properties.ReadOnly = true;
@@ -36,9 +66,10 @@ namespace QuanLyHocVien.UserControl
             spinEditDIEM.Properties.MinValue = 0;
             spinEditDIEM.Properties.MaxValue = 10;
             spinEditDIEM.Properties.Increment = 0.1m;
+            spinEditTIENNOP.Properties.Increment = 500m;
 
             spinEditDIEM.EditValueChanged += spinEditDIEM_EditValueChanged;
-
+            LoadLookups();
             dataLoading();
             status(true);
         }
@@ -61,10 +92,9 @@ namespace QuanLyHocVien.UserControl
                 return;
             }
 
-            // KQ: ĐẬU nếu >= 7
+
             textEditKQUA.Text = (diem.Value >= 7m) ? "ĐẬU" : "RỚT";
 
-            // XL: A/B/C/D
             char xl;
             if (diem.Value >= 8.5m) xl = 'A';
             else if (diem.Value >= 7.0m) xl = 'B';
@@ -81,8 +111,8 @@ namespace QuanLyHocVien.UserControl
 
         private void Xoa_het()
         {
-            textEditMALH.Text = "";
-            textEditMAHV.Text = "";
+            lookUpEditMALH.EditValue = null;
+            lookUpEditMAHV.EditValue = null;
             spinEditDIEM.EditValue = null;
             textEditKQUA.Text = "";
             textEditXEPLOAI.Text = "";
@@ -99,16 +129,19 @@ namespace QuanLyHocVien.UserControl
         }
         private void btnNewAdd_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            textEditMALH.Properties.ReadOnly = false;
-            textEditMAHV.Properties.ReadOnly = false;
+            lookUpEditMALH.Properties.ReadOnly = false;
+            lookUpEditMAHV.Properties.ReadOnly = false;
 
             malhOld = null;
             mahvOld = null;
 
             Xoa_het();
             status(false);
-            textEditMALH.Focus();
+
+            lookUpEditMALH.Focus();
+            lookUpEditMALH.ShowPopup();
         }
+
         private void GVBienLai_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (btnSave.Enabled && btnCancel.Enabled)
@@ -117,8 +150,8 @@ namespace QuanLyHocVien.UserControl
             malhOld = GVBienLai.GetFocusedRowCellValue("MALH")?.ToString()?.Trim();
             mahvOld = GVBienLai.GetFocusedRowCellValue("MAHV")?.ToString()?.Trim();
 
-            textEditMALH.Text = malhOld;
-            textEditMAHV.Text = mahvOld;
+            lookUpEditMALH.EditValue = malhOld;
+            lookUpEditMAHV.EditValue = mahvOld;
 
             var diem = GVBienLai.GetFocusedRowCellValue("DIEM");
             spinEditDIEM.EditValue = (diem == null || diem == DBNull.Value) ? null : diem;
@@ -129,8 +162,8 @@ namespace QuanLyHocVien.UserControl
             var tien = GVBienLai.GetFocusedRowCellValue("TIENNOP");
             spinEditTIENNOP.EditValue = (tien == null || tien == DBNull.Value) ? null : tien;
 
-            textEditMALH.Properties.ReadOnly = true;
-            textEditMAHV.Properties.ReadOnly = true;
+            lookUpEditMALH.Properties.ReadOnly = true;
+            lookUpEditMAHV.Properties.ReadOnly = true;
         }
 
         private void btnCancel_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -143,19 +176,15 @@ namespace QuanLyHocVien.UserControl
         {
             try
             {
-                string malh = (textEditMALH.Text ?? "").Trim();
-                string mahv = (textEditMAHV.Text ?? "").Trim();
+                string malh = (lookUpEditMALH.EditValue ?? "").ToString().Trim();
+                string mahv = (lookUpEditMAHV.EditValue ?? "").ToString().Trim();
 
-                decimal? diem = null;
-                if (spinEditDIEM.EditValue != null)
-                    diem = Convert.ToDecimal(spinEditDIEM.EditValue);
+                decimal? diem = (spinEditDIEM.EditValue != null) ? Convert.ToDecimal(spinEditDIEM.EditValue) : (decimal?)null;
 
                 string kqua = (textEditKQUA.Text ?? "").Trim();
                 string xeploai = (textEditXEPLOAI.Text ?? "").Trim();
 
-                decimal? tiennop = null;
-                if (spinEditTIENNOP.EditValue != null)
-                    tiennop = Convert.ToDecimal(spinEditTIENNOP.EditValue);
+                decimal? tiennop = (spinEditTIENNOP.EditValue != null) ? Convert.ToDecimal(spinEditTIENNOP.EditValue) : (decimal?)null;
 
                 if (blBLL.ExistsBienLai(malh, mahv, out string errExists))
                 {
@@ -235,8 +264,8 @@ namespace QuanLyHocVien.UserControl
         {
             try
             {
-                string malh = (textEditMALH.Text ?? "").Trim();
-                string mahv = (textEditMAHV.Text ?? "").Trim();
+                string malh = (lookUpEditMALH.EditValue ?? "").ToString().Trim();
+                string mahv = (lookUpEditMAHV.EditValue ?? "").ToString().Trim();
 
                 if (string.IsNullOrWhiteSpace(malh) || string.IsNullOrWhiteSpace(mahv))
                 {
@@ -247,9 +276,7 @@ namespace QuanLyHocVien.UserControl
 
                 var ans = XtraMessageBox.Show(
                     $"Bạn có chắc muốn xóa biên lai (MALH: {malh}, MAHV: {mahv}) ?",
-                    "Xác nhận",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+                    "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (ans != DialogResult.Yes) return;
 

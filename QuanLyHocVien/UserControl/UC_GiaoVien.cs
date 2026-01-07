@@ -190,8 +190,8 @@ namespace QuanLyHocVien.UserControl
                 {
                     var ans2 = XtraMessageBox.Show(
                         $"Giáo viên này đang được phân công {cntLH} lớp.\n" +
-                        $"Bạn có muốn gỡ giáo viên khỏi các lớp (MAGV = NULL) rồi mới xóa không?",
-                        "Có lớp học liên quan",
+                        $"Bạn có muốn gỡ mã giáo viên khỏi các lớp rồi mới xóa không?",
+                        "Có lớp học được phân công bởi giáo viên này",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Warning);
 

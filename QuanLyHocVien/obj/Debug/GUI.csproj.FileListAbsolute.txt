@@ -111,3 +111,4 @@ C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmT
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKeGiaoVien.resources
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.Report.XtraReportThongKeHV.resources
 C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.frmThongKeHocVien.resources
+C:\Users\sherl\source\repos\DoAnCoHao\QuanLyHocVien\obj\Debug\QuanLyHocVien.UserControl.UC_Main.resources

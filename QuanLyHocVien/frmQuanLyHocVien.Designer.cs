@@ -50,6 +50,7 @@ namespace QuanLyHocVien
             this.accordionControlElementLopHoc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator6 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElementBienLai = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementExit = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.barWorkspaceMenuItem1 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
@@ -73,7 +74,8 @@ namespace QuanLyHocVien
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlHeThong,
-            this.accordionControlElementThongTin});
+            this.accordionControlElementThongTin,
+            this.accordionControlElementExit});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -151,7 +153,6 @@ namespace QuanLyHocVien
             this.accordionControlElementLopHoc,
             this.accordionControlSeparator6,
             this.accordionControlElementBienLai});
-            this.accordionControlElementThongTin.Expanded = true;
             this.accordionControlElementThongTin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementThongTin.ImageOptions.SvgImage")));
             this.accordionControlElementThongTin.Name = "accordionControlElementThongTin";
             this.accordionControlElementThongTin.Text = "Quản Lý Thông Tin";
@@ -199,6 +200,13 @@ namespace QuanLyHocVien
             this.accordionControlElementBienLai.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElementBienLai.Text = "Danh Mục Biên Lai";
             this.accordionControlElementBienLai.Click += new System.EventHandler(this.accordionControlElementBienLai_Click);
+            // 
+            // accordionControlElementExit
+            // 
+            this.accordionControlElementExit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementExit.ImageOptions.SvgImage")));
+            this.accordionControlElementExit.Name = "accordionControlElementExit";
+            this.accordionControlElementExit.Text = "Thoát";
+            this.accordionControlElementExit.Click += new System.EventHandler(this.accordionControlElementExit_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -256,7 +264,6 @@ namespace QuanLyHocVien
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần Mềm Quản Lý Học Viên";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLyHocVien_FormClosing);
-            this.Load += new System.EventHandler(this.frmQuanLyHocVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -288,5 +295,6 @@ namespace QuanLyHocVien
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator4;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator5;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementExit;
     }
 }

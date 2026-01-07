@@ -68,7 +68,6 @@ namespace DAL
             }
         }
 
-        // cascadeLopHoc = true: gỡ MAGV khỏi LOPHOC (set null) rồi mới xóa GIAOVIEN
         public bool DeleteGiaoVien(string magv, bool cascadeLopHoc, out string err)
         {
             err = null;
@@ -89,13 +88,12 @@ namespace DAL
                     int cnt = db.LOPHOCs.Count(x => x.MAGV == magv);
                     if (cnt > 0)
                     {
-                        if (!cascadeLopHoc)
-                        {
-                            err = $"Không thể xóa vì giáo viên đang được phân công {cnt} lớp học.";
-                            return false;
-                        }
+                        //if (!cascadeLopHoc)
+                        //{
+                        //    err = $"Không thể xóa vì giáo viên đang được phân công {cnt} lớp học.";
+                        //    return false;
+                        //}
 
-                        // gỡ giáo viên khỏi các lớp (MAGV trong LOPHOC cho phép null)
                         var dsLop = db.LOPHOCs.Where(x => x.MAGV == magv).ToList();
                         foreach (var lh in dsLop)
                             lh.MAGV = null;

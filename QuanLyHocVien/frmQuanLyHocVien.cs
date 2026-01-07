@@ -18,9 +18,11 @@ namespace QuanLyHocVien
         private readonly UC_GiaoVien ucGiaoVien = new UC_GiaoVien();
         private readonly UC_LopHoc ucLopHoc = new UC_LopHoc();
         private readonly UC_BienLai ucBienLai = new UC_BienLai();
+        private readonly UC_Main ucMain = new UC_Main();
         public frmQuanLyHocVien()
         {
             InitializeComponent();
+            ShowMain();
             this.KeyPreview = true;
             this.KeyDown += frmQuanLyHocVien_KeyDown;
             using (var fLogin = new frmLogin())
@@ -91,6 +93,7 @@ namespace QuanLyHocVien
         {
             DisEndLogin(true);
             ClearAllUserControls();
+            ShowMain();
         }
         private void frmQuanLyHocVien_Load(object sender, EventArgs e)
         {
@@ -122,13 +125,16 @@ namespace QuanLyHocVien
             }
         }
 
+        private void ShowMain()
+        {
+            ucMain.Dock = DockStyle.Fill;
+            fluentDesignFormContainerMain.Controls.Clear();
+            fluentDesignFormContainerMain.Controls.Add(ucMain);
+            ucMain.BringToFront();
+        }
 
         private void ShowHocVien()
         {
-            if (ucHocVien == null)
-            {
-                ucHocVien.Dock = DockStyle.Fill;
-            }
             ucHocVien.Dock = DockStyle.Fill;
             fluentDesignFormContainerMain.Controls.Clear();
             fluentDesignFormContainerMain.Controls.Add(ucHocVien);
@@ -137,11 +143,6 @@ namespace QuanLyHocVien
 
         private void ShowGiaoVien()
         {
-            if (ucGiaoVien == null)
-            {
-                ucGiaoVien.Dock = DockStyle.Fill;
-            }
-            ucGiaoVien.Dock = DockStyle.Fill;
             fluentDesignFormContainerMain.Controls.Clear();
             fluentDesignFormContainerMain.Controls.Add(ucGiaoVien);
             ucGiaoVien.BringToFront();
@@ -149,10 +150,6 @@ namespace QuanLyHocVien
 
         private void ShowLopHoc()
         {
-            if (ucLopHoc == null)
-            {
-                ucLopHoc.Dock = DockStyle.Fill;
-            }
             ucLopHoc.Dock = DockStyle.Fill;
             fluentDesignFormContainerMain.Controls.Clear();
             fluentDesignFormContainerMain.Controls.Add(ucLopHoc);
@@ -161,10 +158,6 @@ namespace QuanLyHocVien
 
         private void ShowBienLai()
         {
-            if (ucBienLai == null)
-            {
-                ucBienLai.Dock = DockStyle.Fill;
-            }
             ucBienLai.Dock = DockStyle.Fill;
             fluentDesignFormContainerMain.Controls.Clear();
             fluentDesignFormContainerMain.Controls.Add(ucBienLai);
@@ -189,6 +182,11 @@ namespace QuanLyHocVien
         private void accordionControlElementBienLai_Click(object sender, EventArgs e)
         {
             ShowBienLai();
+        }
+
+        private void accordionControlElementExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
     }

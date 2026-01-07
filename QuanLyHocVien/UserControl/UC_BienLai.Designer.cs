@@ -78,10 +78,8 @@ namespace QuanLyHocVien.UserControl
             this.spinEditDIEM = new DevExpress.XtraEditors.SpinEdit();
             this.textEditKQUA = new DevExpress.XtraEditors.TextEdit();
             this.textEditXEPLOAI = new DevExpress.XtraEditors.TextEdit();
-            this.textEditMAHV = new DevExpress.XtraEditors.TextEdit();
             this.labelControlTienNop = new DevExpress.XtraEditors.LabelControl();
             this.labelControlKetQua = new DevExpress.XtraEditors.LabelControl();
-            this.textEditMALH = new DevExpress.XtraEditors.TextEdit();
             this.labelControlXepLoai = new DevExpress.XtraEditors.LabelControl();
             this.labelControlDiem = new DevExpress.XtraEditors.LabelControl();
             this.labelControlMAHV = new DevExpress.XtraEditors.LabelControl();
@@ -97,6 +95,8 @@ namespace QuanLyHocVien.UserControl
             this.gridColumnTIENNOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.lookUpEditMAHV = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEditMALH = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlBienLai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlHocVien)).BeginInit();
             this.panelControlHocVien.SuspendLayout();
@@ -104,10 +104,10 @@ namespace QuanLyHocVien.UserControl
             ((System.ComponentModel.ISupportInitialize)(this.spinEditDIEM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKQUA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditXEPLOAI.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMAHV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMALH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCBienLai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVBienLai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMAHV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMALH.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonStatusBarThongTin
@@ -481,14 +481,14 @@ namespace QuanLyHocVien.UserControl
             // 
             // panelControlHocVien
             // 
+            this.panelControlHocVien.Controls.Add(this.lookUpEditMALH);
+            this.panelControlHocVien.Controls.Add(this.lookUpEditMAHV);
             this.panelControlHocVien.Controls.Add(this.spinEditTIENNOP);
             this.panelControlHocVien.Controls.Add(this.spinEditDIEM);
             this.panelControlHocVien.Controls.Add(this.textEditKQUA);
             this.panelControlHocVien.Controls.Add(this.textEditXEPLOAI);
-            this.panelControlHocVien.Controls.Add(this.textEditMAHV);
             this.panelControlHocVien.Controls.Add(this.labelControlTienNop);
             this.panelControlHocVien.Controls.Add(this.labelControlKetQua);
-            this.panelControlHocVien.Controls.Add(this.textEditMALH);
             this.panelControlHocVien.Controls.Add(this.labelControlXepLoai);
             this.panelControlHocVien.Controls.Add(this.labelControlDiem);
             this.panelControlHocVien.Controls.Add(this.labelControlMAHV);
@@ -545,14 +545,6 @@ namespace QuanLyHocVien.UserControl
             this.textEditXEPLOAI.Size = new System.Drawing.Size(207, 20);
             this.textEditXEPLOAI.TabIndex = 10;
             // 
-            // textEditMAHV
-            // 
-            this.textEditMAHV.Location = new System.Drawing.Point(168, 111);
-            this.textEditMAHV.MenuManager = this.ribbonControlBienLai;
-            this.textEditMAHV.Name = "textEditMAHV";
-            this.textEditMAHV.Size = new System.Drawing.Size(207, 20);
-            this.textEditMAHV.TabIndex = 7;
-            // 
             // labelControlTienNop
             // 
             this.labelControlTienNop.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -572,14 +564,6 @@ namespace QuanLyHocVien.UserControl
             this.labelControlKetQua.Size = new System.Drawing.Size(57, 14);
             this.labelControlKetQua.TabIndex = 5;
             this.labelControlKetQua.Text = "Kết Quả :";
-            // 
-            // textEditMALH
-            // 
-            this.textEditMALH.Location = new System.Drawing.Point(168, 67);
-            this.textEditMALH.MenuManager = this.ribbonControlBienLai;
-            this.textEditMALH.Name = "textEditMALH";
-            this.textEditMALH.Size = new System.Drawing.Size(207, 20);
-            this.textEditMALH.TabIndex = 6;
             // 
             // labelControlXepLoai
             // 
@@ -718,6 +702,26 @@ namespace QuanLyHocVien.UserControl
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Help";
             // 
+            // lookUpEditMAHV
+            // 
+            this.lookUpEditMAHV.Location = new System.Drawing.Point(168, 112);
+            this.lookUpEditMAHV.MenuManager = this.ribbonControlBienLai;
+            this.lookUpEditMAHV.Name = "lookUpEditMAHV";
+            this.lookUpEditMAHV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditMAHV.Size = new System.Drawing.Size(207, 20);
+            this.lookUpEditMAHV.TabIndex = 12;
+            // 
+            // lookUpEditMALH
+            // 
+            this.lookUpEditMALH.Location = new System.Drawing.Point(168, 68);
+            this.lookUpEditMALH.MenuManager = this.ribbonControlBienLai;
+            this.lookUpEditMALH.Name = "lookUpEditMALH";
+            this.lookUpEditMALH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditMALH.Size = new System.Drawing.Size(207, 20);
+            this.lookUpEditMALH.TabIndex = 13;
+            // 
             // UC_BienLai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -737,10 +741,10 @@ namespace QuanLyHocVien.UserControl
             ((System.ComponentModel.ISupportInitialize)(this.spinEditDIEM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditKQUA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditXEPLOAI.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMAHV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMALH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCBienLai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVBienLai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMAHV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMALH.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -750,8 +754,6 @@ namespace QuanLyHocVien.UserControl
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBarThongTin;
         private DevExpress.XtraEditors.PanelControl panelControlHocVien;
         private DevExpress.XtraEditors.TextEdit textEditXEPLOAI;
-        private DevExpress.XtraEditors.TextEdit textEditMAHV;
-        private DevExpress.XtraEditors.TextEdit textEditMALH;
         private DevExpress.XtraEditors.LabelControl labelControlXepLoai;
         private DevExpress.XtraEditors.LabelControl labelControlDiem;
         private DevExpress.XtraEditors.LabelControl labelControlMAHV;
@@ -814,5 +816,7 @@ namespace QuanLyHocVien.UserControl
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageHelp;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupHelp;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditMALH;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditMAHV;
     }
 }

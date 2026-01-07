@@ -216,6 +216,14 @@
     <Compile Include="Report\XtraReportTongTienTheoLop.Designer.cs">
       <DependentUpon>XtraReportTongTienTheoLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UC_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Main.Designer.cs">
+      <DependentUpon>UC_Main.cs</DependentUpon>
+    </Compile>
+    <Content Include="Images\hinh 1.jpg" />
+    <Content Include="Images\hinh 2.jpg" />
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +300,9 @@
     <Content Include="Help\HuongDan.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="UserControl\UC_Main.resx">
+      <DependentUpon>UC_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

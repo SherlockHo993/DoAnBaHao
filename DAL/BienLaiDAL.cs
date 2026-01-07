@@ -100,6 +100,34 @@ namespace DAL
                 db.SaveChanges();
             }
         }
+
+        public IEnumerable GetLookupLopHoc()
+        {
+            using (var db = new QLHVContextDB())
+            {
+                return db.LOPHOCs
+                         .Select(lh => new
+                         {
+                             MALH = lh.MALH.Trim(),
+                             TENLOP = lh.TENLOP
+                         })
+                         .ToList();
+            }
+        }
+
+        public IEnumerable GetLookupHocVien()
+        {
+            using (var db = new QLHVContextDB())
+            {
+                return db.HOCVIENs
+                         .Select(hv => new
+                         {
+                             MAHV = hv.MAHV.Trim(),
+                             HOTENHV = (hv.HO + " " + hv.TEN)
+                         })
+                         .ToList();
+            }
+        }
     }
 }
 

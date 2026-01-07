@@ -14,6 +14,17 @@ namespace BLL
     {
         private readonly BienLaiDAL blDAL = new BienLaiDAL();
 
+
+        public IEnumerable GetLookupLopHoc()
+        {
+            return blDAL.GetLookupLopHoc();
+        }
+
+        public IEnumerable GetLookupHocVien()
+        {
+            return blDAL.GetLookupHocVien();
+        }
+
         public IEnumerable GetListStaff()
         {
             return blDAL.GetListStaff();
@@ -48,7 +59,7 @@ namespace BLL
 
             if (string.IsNullOrWhiteSpace(malh) || string.IsNullOrWhiteSpace(mahv))
             {
-                err = "MALH/MAHV không hợp lệ.";
+                err = "Đề Nghị Nhập đầy đủ \"Mã Lớp Học\" và \"Mã Học Viên\".";
                 return true;
             }
 
